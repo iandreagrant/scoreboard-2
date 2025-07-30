@@ -14,6 +14,9 @@ let containerEl = document.getElementById("container")
 let winnerText = document.getElementById("winner-text")
 let winnerScore = document.getElementById("score-display")
 
+let homeLabel = document.getElementById("home-label")
+let guestLabel = document.getElementById("guest-label")
+
 let confettiCanvas = document.getElementById('confetti-canvas')
 let myConfetti = confetti.create(confettiCanvas, { resize: true, useWorker: true })
 
@@ -98,11 +101,11 @@ function endGame() {
     let winner = ''
     
     if (homeCurrentScore > guestCurrentScore) {
-        winner = 'Home'
+        winner = homeLabel
     } 
     
     else if (guestCurrentScore > homeCurrentScore) {
-        winner = 'Guest'
+        winner = guestLabel
     } 
     
     else {
