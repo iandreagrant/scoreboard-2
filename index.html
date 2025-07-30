@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="team-container" id="home-container">
+                <h3 class="team-label">HOME</h3>
+                <h2 class="score-container" id="home-score">0</h2>
+                <div class="score-controls">
+                    <button class="score-btn" id="home-add1-btn" onclick="homeAdd1()">+1</button>
+                    <button class="score-btn" id="home-add2-btn" onclick="homeAdd2()">+2</button>
+                    <button class="score-btn" id="home-add3-btn" onclick="homeAdd3()">+3</button>
+                </div>
+            </div>
+            <div class="team-container" id="guest-container">
+                <h3 class="team-label">GUEST</h3>
+                <h2 class="score-container" id="guest-score">0</h2>
+                <div class="score-controls">
+                    <button class="score-btn" id="guest-add1-btn" onclick="guestAdd1()">+1</button>
+                    <button class="score-btn" id="guest-add2-btn" onclick="guestAdd2()">+2</button>
+                    <button class="score-btn" id="guest-add3-btn" onclick="guestAdd3()">+3</button>
+                </div>
+            </div>
+            <div class="game-controls">
+                <button class="new-game-btn" onclick="newGame()">New Game</button>
+                <button class="end-game-btn" onclick="endGame()">End Game</button>
+            </div>
+        </div>
+        
+        <div class="winner-container hidden " id="winner-container">
+            <canvas id="confetti-canvas"></canvas>
+            <div>
+                <h1 id="winner-text"></h1>
+                <h3 id="score-display"><h3>
+            </div>
+            <div class="game-controls">
+                <button class="new-game-btn" onclick="newGame()">New Game</button>
+            </div>
+            
+        </div>
+        
+        <script src="index.js"></script>
+        
+    </body>
+</html>
